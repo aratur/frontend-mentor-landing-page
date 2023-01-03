@@ -343,7 +343,8 @@ footer ul {
   /* replace background */
   header {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(images/desktop/image-hero.jpg);
+      url(images/desktop/image-hero.jpg) no-repeat;
+    background-size: cover;
   }
 
   /* 
