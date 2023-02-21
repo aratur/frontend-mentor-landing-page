@@ -29,10 +29,7 @@ The designs were created to the following widths:
 
 ### Screenshot
 
-Solution screenshot for desktop (1440px screen width)
-![](solution/desktop.png)
-Solution screenshot for mobile (375px screen width)
-![](solution/mobile.png)
+![](solution/preview.png)
 
 ### Links
 
