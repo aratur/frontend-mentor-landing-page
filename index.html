@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
@@ -12,29 +11,42 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Loopstudios landing page</title>
+    <title>Loopstudios landing page</title>
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="header">
       <input
         type="checkbox"
         name="hamburger-checkbox"
         id="hamburger-checkbox"
+        class="header__checkbox"
       />
-      <div class="nav-container">
+      <div class="header__nav-container">
         <img src="images/logo.svg" alt="loopstudios logo" class="logo" />
-        <label for="hamburger-checkbox" class="hamburger-icon"> </label>
-        <nav>
-          <ul>
-            <li><a href="#header" class="underline">About</a></li>
-            <li><a href="#header" class="underline">Careers</a></li>
-            <li><a href="#header" class="underline">Events</a></li>
-            <li><a href="#header" class="underline">Products</a></li>
-            <li><a href="#header" class="underline">Support</a></li>
+        <label for="hamburger-checkbox" class="header__hamburger-icon"> </label>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#header" class="underline">About</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#header" class="underline">Careers</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#header" class="underline">Events</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#header" class="underline">Products</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#header" class="underline">Support</a>
+            </li>
           </ul>
         </nav>
       </div>
-      <h1>Immersive<br />experiences<br />that deliver</h1>
+      <h1 class="header__title">
+        Immersive<br />experiences<br />that deliver
+      </h1>
     </header>
     <main>
       <div class="spacing-1"></div>
@@ -45,14 +57,16 @@
             srcset="images/desktop/image-interactive.jpg"
           />
           <img
-            class="leader-img"
+            class="intro-article__leader-img"
             src="images/mobile/image-interactive.jpg"
             alt="a person in VR glassess"
           />
         </picture>
-        <div class="intro-overlay-container">
-          <h2>The leader in<br />interactive VR</h2>
-          <p class="intro-description font-alata">
+        <div class="intro-article__overlay-container">
+          <h2 class="intro-article__title">
+            The leader in<br />interactive VR
+          </h2>
+          <p class="intro-article__description font-alata">
             Founded in 2011, Loopstudios has been producing world-class virtual
             reality projects for some of the best companies around the globe.
             Our award-winning creations have transformed businesses through
@@ -62,8 +76,8 @@
       </article>
       <div class="spacing-2"></div>
       <div class="tiles-grid">
-        <h2>Our creations</h2>
-        <div class="tile-item">
+        <h2 class="tiles-grid__heading">Our creations</h2>
+        <div class="tiles-grid__item">
           <picture>
             <source
               media="(min-width: 1000px)"
@@ -72,13 +86,13 @@
             <img
               src="images/mobile/image-deep-earth.jpg"
               alt="earth from space"
-              class="tile-img"
+              class="tiles-grid__image"
             />
           </picture>
-          <div class="tile-gradient"></div>
-          <h3>Deep<br />earth</h3>
+          <div class="tiles-grid__gradient"></div>
+          <h3 class="tiles-grid__title">Deep<br />earth</h3>
         </div>
-        <div class="tile-item">
+        <div class="tiles-grid__item">
           <picture>
             <source
               media="(min-width: 1000px)"
@@ -87,13 +101,13 @@
             <img
               src="images/mobile/image-night-arcade.jpg"
               alt="fragment of an arcade game"
-              class="tile-img"
+              class="tiles-grid__image"
             />
           </picture>
-          <div class="tile-gradient"></div>
-          <h3>Night<br />arcade</h3>
+          <div class="tiles-grid__gradient"></div>
+          <h3 class="tiles-grid__title">Night<br />arcade</h3>
         </div>
-        <div class="tile-item">
+        <div class="tiles-grid__item">
           <picture>
             <source
               media="(min-width: 1000px)"
@@ -102,13 +116,13 @@
             <img
               src="images/mobile/image-soccer-team.jpg"
               alt="a socker player"
-              class="tile-img"
+              class="tiles-grid__image"
             />
           </picture>
-          <div class="tile-gradient"></div>
-          <h3>Soccer<br />team VR</h3>
+          <div class="tiles-grid__gradient"></div>
+          <h3 class="tiles-grid__title">Soccer<br />team VR</h3>
         </div>
-        <div class="tile-item">
+        <div class="tiles-grid__item">
           <picture>
             <source
               media="(min-width: 1000px)"
@@ -117,13 +131,13 @@
             <img
               src="images/mobile/image-grid.jpg"
               alt="part of a race car"
-              class="tile-img"
+              class="tiles-grid__image"
             />
           </picture>
-          <div class="tile-gradient"></div>
-          <h3>The<br />grid</h3>
+          <div class="tiles-grid__gradient"></div>
+          <h3 class="tiles-grid__title">The<br />grid</h3>
         </div>
-        <div class="tile-item">
+        <div class="tiles-grid__item">
           <picture>
             <source
               media="(min-width: 1000px)"
@@ -132,13 +146,13 @@
             <img
               src="images/mobile/image-from-above.jpg"
               alt="twisted road from above"
-              class="tile-img"
+              class="tiles-grid__image"
             />
           </picture>
-          <div class="tile-gradient"></div>
-          <h3>From up<br />above VR</h3>
+          <div class="tiles-grid__gradient"></div>
+          <h3 class="tiles-grid__title">From up<br />above VR</h3>
         </div>
-        <div class="tile-item">
+        <div class="tiles-grid__item">
           <picture>
             <source
               media="(min-width: 1000px)"
@@ -147,13 +161,13 @@
             <img
               src="images/mobile/image-pocket-borealis.jpg"
               alt="aurora borealis"
-              class="tile-img"
+              class="tiles-grid__image"
             />
           </picture>
-          <div class="tile-gradient"></div>
-          <h3>Pocket<br />borealis</h3>
+          <div class="tiles-grid__gradient"></div>
+          <h3 class="tiles-grid__title">Pocket<br />borealis</h3>
         </div>
-        <div class="tile-item">
+        <div class="tiles-grid__item">
           <picture>
             <source
               media="(min-width: 1000px)"
@@ -162,26 +176,26 @@
             <img
               src="images/mobile/image-curiosity.jpg"
               alt="curiosity Mars rover"
-              class="tile-img"
+              class="tiles-grid__image"
             />
           </picture>
-          <div class="tile-gradient"></div>
-          <h3>The<br />curiosity</h3>
+          <div class="tiles-grid__gradient"></div>
+          <h3 class="tiles-grid__title">The<br />curiosity</h3>
         </div>
-        <div class="tile-item">
+        <div class="tiles-grid__item">
           <picture>
             <source
               media="(min-width: 1000px)"
               srcset="images/desktop/image-fisheye.jpg"
             />
             <img
-              class="tile-img"
+              class="tiles-grid__image"
               src="images/mobile/image-fisheye.jpg"
               alt="fisheye image of the sky"
             />
           </picture>
-          <div class="tile-gradient"></div>
-          <h3>Make it<br />fisheye</h3>
+          <div class="tiles-grid__gradient"></div>
+          <h3 class="tiles-grid__title">Make it<br />fisheye</h3>
         </div>
         <div class="see-all-container">
           <button type="button" class="see-all-button font-alata">
@@ -191,35 +205,57 @@
       </div>
       <div class="spacing-3"></div>
     </main>
-    <footer id="footer" class="font-alata">
+    <footer id="footer" class="footer font-alata">
       <img
         src="images/logo.svg"
         alt="loopstudios logo"
         height="24"
-        class="logo"
+        class="footer__logo"
       />
-      <ul>
-        <li><a href="#footer" class="underline">About</a></li>
-        <li><a href="#footer" class="underline">Careers</a></li>
-        <li><a href="#footer" class="underline">Events</a></li>
-        <li><a href="#footer" class="underline">Products</a></li>
-        <li><a href="#footer" class="underline">Support</a></li>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="#footer" class="footer__link underline">About</a>
+        </li>
+        <li class="footer__item">
+          <a href="#footer" class="footer__link underline">Careers</a>
+        </li>
+        <li class="footer__item">
+          <a href="#footer" class="footer__link underline">Events</a>
+        </li>
+        <li class="footer__item">
+          <a href="#footer" class="footer__link underline">Products</a>
+        </li>
+        <li class="footer__item">
+          <a href="#footer" class="footer__link underline">Support</a>
+        </li>
       </ul>
       <div class="social-container">
-        <a href="#footer" class="underline"
-          ><img src="images/icon-facebook.svg" alt="facebook link"
+        <a href="#footer" class="footer__social-link underline"
+          ><img
+            src="images/icon-facebook.svg"
+            alt="facebook link"
+            class="footer__social-icon"
         /></a>
-        <a href="#footer" class="underline"
-          ><img src="images/icon-twitter.svg" alt="twitter link"
+        <a href="#footer" class="footer__social-link underline"
+          ><img
+            src="images/icon-twitter.svg"
+            alt="twitter link"
+            class="footer__social-icon"
         /></a>
-        <a href="#footer" class="underline"
-          ><img src="images/icon-pinterest.svg" alt="pinterest link"
+        <a href="#footer" class="footer__social-link underline"
+          ><img
+            src="images/icon-pinterest.svg"
+            alt="pinterest link"
+            class="footer__social-icon"
         /></a>
-        <a href="#footer" class="underline"
-          ><img src="images/icon-instagram.svg" alt="instagram link"
+        <a href="#footer" class="footer__social-link underline"
+          ><img
+            src="images/icon-instagram.svg"
+            alt="instagram link"
+            class="footer__social-icon"
         /></a>
       </div>
-      <p class="copyright">© 2021 Loopstudios. All rights reserved.</p>
+      <p class="footer__copyright">© 2021 Loopstudios. All rights reserved.</p>
     </footer>
   </body>
 </html>

@@ -58,7 +58,7 @@ body {
      ** Header with navigation **
 */
 
-header {
+.header {
   background-image: url(images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -66,18 +66,18 @@ header {
   position: relative;
 }
 
-header .logo {
+.header__logo {
   height: 24px;
 }
 
-.nav-container {
+.header__nav-container {
   padding: 40px var(--mobile-screen-margin);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-header nav {
+.header__nav {
   width: 100%;
   background-color: var(--clr-black);
   color: var(--clr-white);
@@ -91,7 +91,7 @@ header nav {
   height: calc(650px - 64px);
 }
 
-header nav ul {
+.header__nav-list {
   position: absolute;
   margin: 0 var(--mobile-screen-margin);
   top: calc(223px - 64px);
@@ -101,7 +101,7 @@ header nav ul {
   row-gap: 24px;
 }
 
-.hamburger-icon {
+.header__hamburger-icon {
   background-image: url(images/icon-hamburger.svg);
   width: 24px;
   height: 16px;
@@ -109,22 +109,22 @@ header nav ul {
 
 /* no js approach for hamburger menu */
 
-#hamburger-checkbox,
-header nav {
+.header__checkbox,
+.header__nav {
   display: none;
 }
 
-#hamburger-checkbox:checked ~ .nav-container {
+.header__checkbox:checked ~ .header__nav-container {
   background-color: black;
 }
 
-#hamburger-checkbox:checked ~ .nav-container .hamburger-icon {
+.header__checkbox:checked ~ .header__hamburger-icon {
   background-image: url(images/icon-close.svg);
   width: 20px;
   height: 20px;
 }
 
-#hamburger-checkbox:checked ~ .nav-container nav {
+.header__checkbox:checked ~ .header__nav {
   display: block;
 }
 
@@ -148,7 +148,7 @@ nav {
   text-transform: uppercase;
 }
 
-h1 {
+.header__title {
   font-size: 40px;
   line-height: 38px;
   border: 2px solid var(--clr-white);
@@ -176,7 +176,7 @@ main {
   height: 96px;
 }
 
-.intro-overlay-container {
+.intro-article__overlay-container {
   margin-top: 48px;
 }
 
@@ -184,13 +184,14 @@ article {
   text-align: center;
 }
 
-h2 {
+.intro-article__title,
+.tiles-grid__heading {
   font-size: 32px;
   line-height: 32px;
   margin: 0 0 24px 0;
 }
 
-.intro-description {
+.intro-article__description {
   line-height: 25px;
   padding: 0 24px;
   color: var(--clr-very-dark-grey);
@@ -213,6 +214,7 @@ h2 {
   letter-spacing: 5px;
   height: 40px;
   width: 157px;
+  cursor: pointer;
 }
 
 .see-all-button:hover {
@@ -227,20 +229,21 @@ h2 {
   justify-items: center;
 }
 
-.tile-item {
+.tiles-grid__item {
   position: relative;
   line-height: 0px;
+  cursor: pointer;
 }
 
-.tile-item:hover {
+.tiles-grid__item:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
 }
 
-.tile-img {
+.tiles-grid__image {
   width: 100%;
 }
 
-.tile-gradient {
+.tiles-grid__gradient {
   position: absolute;
   top: 0;
   left: 0;
@@ -254,7 +257,7 @@ h2 {
   );
 }
 
-h3 {
+.tiles-grid__title {
   font-size: 24px;
   line-height: 24px;
   color: var(--clr-white);
@@ -275,11 +278,11 @@ footer {
   justify-items: center;
 }
 
-footer .logo {
+.footer__logo {
   height: 24px;
 }
 
-footer ul {
+.footer__list {
   margin: 32px 0px;
   padding: 0px 0px;
   display: flex;
@@ -296,7 +299,7 @@ footer ul {
   column-gap: 16px;
 }
 
-.copyright {
+.footer__copyright {
   color: var(--clr-dark-grey);
 }
 
@@ -332,20 +335,20 @@ footer ul {
 */
 @media screen and (min-width: 1000px) {
   /* remove hamburger */
-  .hamburger-icon {
+  .header__hamburger-icon {
     display: none;
   }
 
-  header .logo {
+  .header__logo {
     height: 32px;
   }
 
-  .nav-container {
+  .header__nav-container {
     padding: 64px var(--desktop-screen-margin);
   }
 
   /* replace background */
-  header {
+  .header {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url(images/desktop/image-hero.jpg) no-repeat;
     background-size: cover;
@@ -355,7 +358,7 @@ footer ul {
     first unset all styles from navigation
     and then apply desktop view CSS
    */
-  header nav {
+  .header__nav {
     all: unset;
     display: block;
     font-family: 'Alata', sans-serif;
@@ -365,7 +368,7 @@ footer ul {
     color: var(--clr-white);
   }
 
-  header nav ul {
+  .header__nav-list {
     all: unset;
     list-style: none;
     width: 380px;
@@ -374,14 +377,14 @@ footer ul {
     justify-content: space-between;
   }
 
-  h1 {
+  .header__title {
     font-size: 72px;
     line-height: 70px;
     margin: 67px var(--desktop-screen-margin);
     width: 650px;
     padding: 39px 39px;
   }
-  h1 br {
+  .header__title br {
     line-height: 0;
   }
 
@@ -406,11 +409,11 @@ footer ul {
     text-align: left;
   }
 
-  .leader-img {
+  .intro-article__leader-img {
     height: 500px;
   }
 
-  .intro-overlay-container {
+  .intro-article__overlay-container {
     background-color: var(--clr-white);
     position: absolute;
     text-align: left;
@@ -421,26 +424,27 @@ footer ul {
     margin-top: 0px;
   }
 
-  h2 {
+  .intro-article__title,
+  .tiles-grid__heading {
     font-size: 48px;
     line-height: 48px;
     margin: 0;
     margin-bottom: 25px;
   }
 
-  .intro-description {
+  .intro-article__description {
     padding: 0;
   }
 
   /* CSS for the portfolio list */
   /* (switch between images is handle by HTML picture element) */
-  .tile-item,
-  .tile-img {
+  .tiles-grid__item,
+  .tiles-grid__image {
     width: 256px;
     height: 450px;
   }
 
-  .tile-gradient {
+  .tiles-grid__gradient {
     background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 130px,
@@ -449,7 +453,7 @@ footer ul {
     );
   }
 
-  h3 {
+  .tiles-grid__title {
     font-size: 32px;
     line-height: 32px;
     bottom: 32px;
@@ -465,7 +469,7 @@ footer ul {
     row-gap: 30px;
   }
 
-  .tiles-grid h2 {
+  .tiles-grid__heading {
     grid-column: 1 / 3;
     grid-row: 1 /1;
     justify-self: flex-start;
@@ -488,11 +492,11 @@ footer ul {
     padding: 42px var(--desktop-screen-margin);
   }
 
-  footer > .logo {
+  .footer__logo {
     justify-self: flex-start;
   }
 
-  footer > ul {
+  .footer__list {
     margin: 0px;
     width: 380px;
     grid-column: 1 / 1;
@@ -511,7 +515,7 @@ footer ul {
       grid-template-columns: auto auto auto auto;
     }
 
-    .tiles-grid h2 {
+    .tiles-grid__heading {
       grid-column: 1 / 4;
       justify-self: flex-start;
     }
