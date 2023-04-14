@@ -10,9 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "^3.2.3",
-    "astro": "^2.3.0",
-    "react": "^18.2.0",
-    "static": "link:@astrojs/vercel/static"
+    "astro": "^2.3.0"
   }
 }
