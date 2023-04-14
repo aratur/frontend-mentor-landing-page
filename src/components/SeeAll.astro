@@ -1,0 +1,48 @@
+<div class="see-all-container">
+    <button type="button" class="see-all-button font-alata">
+      See all
+    </button>
+</div>
+
+<style>
+    /* CSS for SEE ALL button +hover */
+    .see-all-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .see-all-button {
+      border: 1px solid var(--clr-black);
+      background-color: var(--clr-white);
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 5px;
+      height: 40px;
+      width: 157px;
+      cursor: pointer;
+    }
+
+    .see-all-button:hover {
+      color: var(--clr-white);
+      background-color: var(--clr-black);
+    }
+
+    @media screen and (min-width: 1000px) {
+        .see-all-container {
+        grid-column: 3 / 4;
+        grid-row: 1 / 1;
+        margin-top: 0px;
+        align-self: flex-start;
+        justify-self: flex-end;
+      }
+    }
+
+    @media screen and (min-width: 1350px) {
+        .see-all-container {
+          grid-column: 4 / 5;
+        }
+    }
+</style>

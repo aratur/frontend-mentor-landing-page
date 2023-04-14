@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Intro from '../components/Intro.astro';
+import Tiles from '../components/Tiles.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Loopstudio landing page">
+	<Header />
+	<main>		
+		<div class="spacing-1"></div>	
+		<Intro />	
+		<div class="spacing-2"></div>
+		<Tiles />
+		<div class="spacing-3"></div>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	main {
+ 	 margin: 0 var(--mobile-screen-margin);
+ 	 background-color: var(--clr-white);
+	}
+
+	/* 
+	    element to define arbitrary spacing
+	    separate classess are needed because this spacing
+	    diverges in desktop view, while on mobile is the same
+	*/
+	.spacing-1,
+	.spacing-2,
+	.spacing-3 {
+	  height: 96px;
+	}
+	@media screen and (min-width: 1000px) {	  
+	  main {
+	    margin: 0 var(--desktop-screen-margin);
+	  }
+
+	  .spacing-1 {
+	    height: 160px;
+	  }
+	  .spacing-2 {
+	    height: 184px;
+	  }
+	  .spacing-3 {
+	    height: 154px;
+	  }
+	}
+</style>

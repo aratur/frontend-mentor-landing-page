@@ -1,0 +1,27 @@
+---
+export interface Props {
+    breakpoint: string;
+    icon_desktop: string;
+    icon_mobile: string;
+    name1: string;
+    name2: string;
+}
+
+const {breakpoint, icon_desktop, icon_mobile, name1, name2} = Astro.props;
+---
+
+<div class="tiles-grid__item">
+    <picture>
+      <source
+        media={`(min-width: ${breakpoint})`}
+        srcset={icon_desktop}
+      />
+      <img
+        src={icon_mobile}
+        alt={name1 + " " + name2}
+        class="tiles-grid__image"
+      />
+    </picture>
+    <div class="tiles-grid__gradient"></div>
+    <h3 class="tiles-grid__title">{name1}<br />{name2}</h3>
+  </div>

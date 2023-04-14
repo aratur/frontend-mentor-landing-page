@@ -1,0 +1,134 @@
+---
+import SeeAll from './SeeAll.astro';
+import Tile from './Title.astro';
+import tiles from '../data/tiles.json';
+
+const breakpoint = '1000px';
+---
+
+<div class="tiles-grid">
+    <h2 class="tiles-grid__heading">Our creations</h2>
+    {
+        tiles.map(({
+        name1, name2, icon_desktop, icon_mobile
+        }) => <Tile 
+            breakpoint={breakpoint} 
+            name1={name1} 
+            name2={name2} 
+            icon_desktop={icon_desktop} 
+            icon_mobile={icon_mobile} />)
+    }
+    <SeeAll />
+  </div>
+
+<style is:global>
+    .tiles-grid {
+      display: grid;
+      row-gap: 24px;
+      justify-items: center;
+    }
+
+    .tiles-grid__heading {
+      font-size: 32px;
+      line-height: 32px;
+      margin: 0 0 24px 0;
+    }
+
+    .tiles-grid__item {
+      position: relative;
+      line-height: 0px;
+      cursor: pointer;
+    }
+
+    .tiles-grid__item:hover {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+    }
+
+    .tiles-grid__image {
+      width: 100%;
+    }
+
+    .tiles-grid__gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0) 240px,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+
+    .tiles-grid__title {
+      font-size: 24px;
+      line-height: 24px;
+      color: var(--clr-white);
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      text-align: left;
+    }
+
+    @media screen and (min-width: 1000px) {
+      .tiles-grid__heading {
+        font-size: 48px;
+        line-height: 48px;
+        margin: 0;
+        margin-bottom: 25px;
+      }
+      /* CSS for the portfolio list */
+      /* (switch between images is handle by HTML picture element) */
+      .tiles-grid__item,
+      .tiles-grid__image {
+        width: 256px;
+        height: 450px;
+      }
+
+      .tiles-grid__gradient {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 130px,
+          rgba(0, 0, 0, 0) 130px,
+          rgba(0, 0, 0, 0.6)
+        );
+      }
+
+      .tiles-grid__title {
+        font-size: 32px;
+        line-height: 32px;
+        bottom: 32px;
+        left: 40px;
+        text-align: left;
+      }
+
+      .tiles-grid {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: space-between;
+        row-gap: 30px;
+      }
+
+      .tiles-grid__heading {
+        grid-column: 1 / 3;
+        grid-row: 1 /1;
+        justify-self: flex-start;
+        margin-bottom: 50px;
+      }
+
+      @media screen and (min-width: 1350px) {
+        .tiles-grid {
+          grid-template-columns: auto auto auto auto;
+        }
+
+        .tiles-grid__heading {
+          grid-column: 1 / 4;
+          justify-self: flex-start;
+        }
+      }
+    }
+
+</style>

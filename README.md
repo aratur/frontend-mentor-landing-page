@@ -10,7 +10,6 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -39,18 +38,9 @@ The designs were created to the following widths:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- Astro, with HTML, CSS, and basic JS
 - Mobile-first workflow
-- no JavaScript
-
-### Useful resources
-
-- [Create a responsive navigation nav with no JS](https://www.youtube.com/watch?v=8QKOaTYvYUA&t=729s) - This has a useful hack on how to do a hamburger without js. Although I think that it might be better to just use JS, this is because sooner or later there comes the time whe you need to handle some edge cases where JS would be required, like action tracking, or adding an alternative way of closing navigation. For this simple site pure CSS worked just fine.
 
 ## Author
 
 - Website - [linkedin](https://www.linkedin.com/in/artur-jedrzejczak/)
-- Frontend Mentor - [profile](https://www.frontendmentor.io/profile/aratur)
